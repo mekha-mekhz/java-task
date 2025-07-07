@@ -1,0 +1,135 @@
+/* General body styling */
+body {
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Input group layout */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Responsive input group fix */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+
+  .input-group .form-control,
+  .input-group .btn {
+    width: 100%;
+  }
+
+  .input-group .btn {
+    margin-top: 10px;
+  }
+}
+
+/* Task List UL */
+#item {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Each task item layout */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Checkbox inside task */
+.task-item input[type="checkbox"] {
+  margin-right: 12px;
+}
+
+/* Task text */
+.task-item span {
+  font-weight: bold;
+  flex: 1;
+  word-break: break-word;
+}
+
+/* Completed tasks */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: normal;
+}
+
+/* Delete button */
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ea07c8 !important;
+  color: white;
+}
+
+/* Filter button container */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button Hover Effects */
+#addbutton:hover {
+  background-color: #3ce000;
+  color: #fff;
+}
+
+#all:hover {
+  background-color: #0056b3;
+  color: #f0e6eb;
+}
+
+#active:hover {
+  background-color: #5a6268;
+  color: #fff;
+}
+
+#completed:hover {
+  background-color: #218838;
+  color: #fff;
+}
+
+/* Smooth transitions */
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Task List Layout */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
