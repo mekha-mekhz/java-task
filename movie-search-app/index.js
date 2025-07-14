@@ -43,7 +43,7 @@ async function getMovieDetails(imdbID) {
   resultBox.appendChild(card);
 }
 
-// Display popular movies on homepage
+
 async function showPopularMovies() {
   resultBox.innerHTML = '<p>Loading popular movies...</p>';
 
